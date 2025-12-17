@@ -83,8 +83,11 @@ return {
           "ts_ls",
           "html",
           "cssls",
+          "tailwindcss",
           "lua_ls",
           "pyright",
+          "intelephense",
+          "emmet_ls",
         },
         handlers = {
           function(server_name)

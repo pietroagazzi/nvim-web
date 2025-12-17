@@ -25,6 +25,8 @@ return {
           "gitignore",
           "query",
           "python",
+          "php",
+          "phpdoc",
         },
       })
 

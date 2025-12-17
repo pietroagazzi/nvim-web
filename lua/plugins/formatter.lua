@@ -17,17 +17,19 @@ return {
            "stylua",
            "black",
            "isort",
+           "pint",
         }
       })
 
       null_ls.setup({
         sources = {
           formatting.prettier.with({
-             extra_filetypes = { "svelte" },
+             extra_filetypes = { "svelte", "blade" },
           }),
           formatting.stylua,
           formatting.isort,
           formatting.black,
+          formatting.pint,
         },
         on_attach = function(client, bufnr)
           if client.supports_method("textDocument/formatting") then
