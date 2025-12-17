@@ -1,0 +1,26 @@
+# Mason (Package Manager) managed tools
+# We generally do not want to commit the binaries installed by Mason
+# as they are platform-specific and should be re-installed by the user.
+mason/
+plugin/
+*.log
+
+# Persistent undo history (if enabled)
+undo/
+
+# Session files
+sessions/
+.nvim/
+
+# Swap files
+*.swp
+*.swo
+
+# Temporary/Backup files
+*~
+*.bak
+*.tmp
+
+# OS generated files
+.DS_Store
+Thumbs.db
