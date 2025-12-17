@@ -49,7 +49,9 @@ The `<Leader>` key is mapped to `<Space>`.
 | **Normal** | `<Leader>hr` | Reset Hunk        |
 | **Normal** | `<Leader>hS` | Stage Buffer      |
 | **Normal** | `<Leader>hp` | Preview Hunk      |
+| **Normal** | `<Leader>hu` | Undo Stage Hunk   |
 | **Normal** | `<Leader>hb` | Blame Line        |
+| **Normal** | `<Leader>hd` | Diff This         |
 | **Normal** | `<Leader>tb` | Toggle Line Blame |
 
 ## Editing & Surround

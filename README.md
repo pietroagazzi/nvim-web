@@ -59,6 +59,31 @@ The Leader key is mapped to `<Space>`. Common commands include:
 - `<Leader>fs`: Live Grep
 - `gd`: Go to Definition
 
+## Usage Tips
+
+### Managing Tools with Mason
+
+This config uses **Mason** to manage external tools (LSPs, Formatters, Linters).
+To check status, update, or install new tools manually, run:
+
+```vim
+:Mason
+```
+
+- **Install**: Press `i` on a package.
+- **Update**: Press `u` to update all.
+- **Uninstall**: Press `X` on an installed package.
+
+### Changing the Theme
+
+The default theme is **Tokyonight** (Night style, transparent).
+To change the theme:
+
+1.  Open `lua/plugins/theme.lua`.
+2.  Change the plugin name (e.g., to `catppuccin/nvim` or `ellisonleao/gruvbox.nvim`).
+3.  Update the `config` function to call the new theme's setup and `vim.cmd("colorscheme ...")`.
+4.  Restart Neovim.
+
 ## Plugins & Addons Detail
 
 The configuration is modular, located in `lua/plugins/`. Here is a breakdown of the installed tools:
