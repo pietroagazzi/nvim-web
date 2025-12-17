@@ -9,13 +9,13 @@ This configuration provides a complete IDE-like experience within the terminal. 
 
 ## Requirements
 
-*   **Neovim** >= 0.9.0
-*   **Git**
-*   **Node.js** & **npm** (Required for Mason, Pyright, Prettier, etc.)
-*   **PHP** (Required for Intelephense and Pint)
-*   **C Compiler** (gcc or clang, required for Treesitter parsers)
-*   **Ripgrep** (Required for Telescope grep searches)
-*   **Nerd Font** (Recommended for icons)
+- **Neovim** >= 0.9.0
+- **Git**
+- **Node.js** & **npm** (Required for Mason, Pyright, Prettier, etc.)
+- **PHP** (Required for Intelephense and Pint)
+- **C Compiler** (gcc or clang, required for Treesitter parsers)
+- **Ripgrep** (Required for Telescope grep searches)
+- **Nerd Font** (Recommended for icons)
 
 ## Installation
 
@@ -40,52 +40,65 @@ This configuration provides a complete IDE-like experience within the terminal. 
     nvim
     ```
 
-## Specialized Features
+## Keybindings
 
-### ⚡ TypeScript & Next.js
-*   **LSP**: `ts_ls` (formerly tsserver) configured for TypeScript/JavaScript.
-*   **Formatting**: `prettier` handles formatting for TS, JS, TSX, and JSON.
-*   **Tailwind**: `tailwindcss` language server included for class autocompletion.
+Detailed keybindings are documented in [KEYBINDINGS.md](./KEYBINDINGS.md).
 
-### 🐘 PHP & Laravel
-*   **LSP**: `intelephense` provides intelligent code completion for PHP.
-*   **Formatting**: `pint` (Laravel's default fixer) is auto-installed and configured via none-ls to format on save.
-*   **Snippets**: Support for PHP framework snippets.
+The Leader key is mapped to `<Space>`. Common commands include:
 
-### 📝 Markdown & Writing
-*   **Highlighting**: Full markdown syntax highlighting (including inline code blocks).
-*   **Formatting**: `prettier` ensures clean and consistent markdown tables and lists.
+- `<Leader>ee`: Toggle File Explorer
+- `<Leader>ff`: Find Files
+- `<Leader>fs`: Live Grep
+- `gd`: Go to Definition
 
-## Key Bindings
+## Plugins & Addons Detail
 
-Leader key: `<Space>`
+The configuration is modular, located in `lua/plugins/`. Here is a breakdown of the installed tools:
 
-### Essentials
+### Core Infrastructure
 
-| Key | Action |
-| :--- | :--- |
-| `<Leader>ee` | Toggle File Explorer |
-| `<Leader>ff` | Find Files |
-| `<Leader>fs` | Live Grep (Search text) |
-| `<Leader>mp` | Format Current Buffer |
+- **lazy.nvim**: A modern plugin manager for Neovim. Handles automatic installation and lazy loading of plugins.
+- **mason.nvim**: A package manager that runs _inside_ Neovim. Used to install and manage LSP servers (like `intelephense`, `ts_ls`), linters, and formatters (like `prettier`, `pint`) in a portable way.
 
-### LSP & Code
+### LSP & Formatting (Intellisense)
 
-| Key | Action |
-| :--- | :--- |
-| `gd` | Go to Definition |
-| `K` | Hover Documentation |
-| `<Leader>ca` | Code Actions |
-| `<Leader>rn` | Rename Symbol |
-| `<Leader>D` | Show Diagnostics |
+- **nvim-lspconfig**: The official configuration for the Neovim Language Server Client.
+- **none-ls.nvim**: Bridges tools that don't speak LSP (like Prettier, Black, Pint) with Neovim's LSP client, allowing standard commands like "Format on Save" to work universally.
+- **mason-lspconfig.nvim**: Closes the gap between Mason and lspconfig, ensuring installed servers are automatically configured.
+
+### Autocompletion
+
+- **nvim-cmp**: The completion engine.
+- **LuaSnip**: Snippet engine required by nvim-cmp.
+- **cmp-nvim-lsp**: Adds LSP source to nvim-cmp.
+
+### Syntax & Treesitter
+
+- **nvim-treesitter**: Provides an abstract syntax tree for code, enabling advanced highlighting (better than Regex), indentation, and folding. Configured with parsers for TypeScript, PHP, Python, Lua, Markdown, etc.
+- **nvim-ts-autotag**: Automatically closes and renames HTML/JSX/XML tags.
+
+### UI & Navigation
+
+- **tokyonight.nvim**: A clean, dark theme with transparent background support.
+- **nvim-tree.lua**: A file explorer tree for sidebar navigation.
+- **lualine.nvim**: A blazing fast and easy-to-configure statusline.
+- **telescope.nvim**: A highly extendable fuzzy finder over lists. Used for finding files, grep searching, and diagnostics.
+- **flash.nvim**: Lets you jump to any location on screen using a few keystrokes (similar to EasyMotion).
+- **which-key.nvim**: Displays a popup with available keybindings if you pause halfway through a command sequence.
+
+### Editing Utilities
+
+- **autopairs**: Automatically closes brackets and quotes.
+- **comment.nvim**: Smart and powerful comment plugin for neovim. Supports `gcc` (line) and `gb` (block) commenting.
+- **todo-comments.nvim**: Highlights comments like `TODO`, `FIXME`, `HACK` in the code and listing them in Telescope.
 
 ## Language Support Summary
 
-| Language | LSP | Formatter |
-| :--- | :--- | :--- |
-| **TypeScript/JS** | `ts_ls` | `prettier` |
-| **PHP** | `intelephense` | `pint` |
-| **HTML/CSS** | `html`, `cssls`, `emmet_ls` | `prettier` |
-| **Tailwind** | `tailwindcss` | `prettier` |
-| **Python** | `pyright` | `black`, `isort` |
-| **Lua** | `lua_ls` | `stylua` |
+| Language          | LSP                         | Formatter        |
+| :---------------- | :-------------------------- | :--------------- |
+| **TypeScript/JS** | `ts_ls`                     | `prettier`       |
+| **PHP**           | `intelephense`              | `pint`           |
+| **HTML/CSS**      | `html`, `cssls`, `emmet_ls` | `prettier`       |
+| **Tailwind**      | `tailwindcss`               | `prettier`       |
+| **Python**        | `pyright`                   | `black`, `isort` |
+| **Lua**           | `lua_ls`                    | `stylua`         |
