@@ -91,6 +91,7 @@ The configuration is modular, located in `lua/plugins/`. Here is a breakdown of 
 - **tokyonight.nvim**: A clean, dark theme with transparent background support.
 - **nvim-tree.lua**: A file explorer tree for sidebar navigation.
 - **lualine.nvim**: A blazing fast and easy-to-configure statusline.
+- **indent-blankline.nvim**: Adds indentation guides to all lines (including empty lines).
 - **telescope.nvim**: A highly extendable fuzzy finder over lists. Used for finding files, grep searching, and diagnostics.
 - **flash.nvim**: Lets you jump to any location on screen using a few keystrokes (similar to EasyMotion).
 - **which-key.nvim**: Displays a popup with available keybindings if you pause halfway through a command sequence.
@@ -98,6 +99,9 @@ The configuration is modular, located in `lua/plugins/`. Here is a breakdown of 
 ### Editing Utilities
 
 - **autopairs**: Automatically closes brackets and quotes.
+- **nvim-surround**: Easily add/change/delete surroundings (parentheses, brackets, quotes, XML tags).
+- **gitsigns.nvim**: Super fast git integration. Shows signs in the gutter and allows inline staging/blame.
+- **persistence.nvim**: Automated session management. Restores your last session on startup if requested.
 - **comment.nvim**: Smart and powerful comment plugin for neovim. Supports `gcc` (line) and `gb` (block) commenting.
 - **todo-comments.nvim**: Highlights comments like `TODO`, `FIXME`, `HACK` in the code and listing them in Telescope.
 

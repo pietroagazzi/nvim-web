@@ -13,14 +13,13 @@ The `<Leader>` key is mapped to `<Space>`.
 | **Normal** | `<Leader>se` | Equalize window sizes                 |
 | **Normal** | `<Leader>sx` | Close current split                   |
 
-## Tab Management
+## Session Management
 
-| Mode       | Key          | Action             |
-| :--------- | :----------- | :----------------- |
-| **Normal** | `<Leader>to` | Open new tab       |
-| **Normal** | `<Leader>tx` | Close current tab  |
-| **Normal** | `<Leader>tn` | Go to next tab     |
-| **Normal** | `<Leader>tp` | Go to previous tab |
+| Mode       | Key          | Action                          |
+| :--------- | :----------- | :------------------------------ |
+| **Normal** | `<Leader>qs` | Restore session for current dir |
+| **Normal** | `<Leader>ql` | Restore last session            |
+| **Normal** | `<Leader>qd` | Don't save current session      |
 
 ## File Explorer (NvimTree)
 
@@ -40,9 +39,29 @@ The `<Leader>` key is mapped to `<Space>`.
 | **Normal** | `<Leader>fs` | Live grep (search string in cwd) |
 | **Normal** | `<Leader>fc` | Find string under cursor         |
 
-## LSP & Code Actions
+## Git Integration (Gitsigns)
 
-These bindings are active only when an LSP server is attached to the buffer.
+| Mode       | Key          | Action            |
+| :--------- | :----------- | :---------------- |
+| **Normal** | `]h`         | Next Hunk         |
+| **Normal** | `[h`         | Prev Hunk         |
+| **Normal** | `<Leader>hs` | Stage Hunk        |
+| **Normal** | `<Leader>hr` | Reset Hunk        |
+| **Normal** | `<Leader>hS` | Stage Buffer      |
+| **Normal** | `<Leader>hp` | Preview Hunk      |
+| **Normal** | `<Leader>hb` | Blame Line        |
+| **Normal** | `<Leader>tb` | Toggle Line Blame |
+
+## Editing & Surround
+
+| Mode       | Key                | Action                        |
+| :--------- | :----------------- | :---------------------------- |
+| **Normal** | `ys<motion><char>` | Add surround (e.g. `ysiw"`)   |
+| **Normal** | `ds<char>`         | Delete surround (e.g. `ds"`)  |
+| **Normal** | `cs<old><new>`     | Change surround (e.g. `cs"'`) |
+| **Visual** | `S<char>`          | Add surround to selection     |
+
+## LSP & Code Actions
 
 | Mode       | Key          | Action                              |
 | :--------- | :----------- | :---------------------------------- |
