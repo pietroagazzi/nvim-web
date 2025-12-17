@@ -63,3 +63,12 @@ These bindings are active only when an LSP server is attached to the buffer.
 | Mode       | Key | Action                                       |
 | :--------- | :-- | :------------------------------------------- |
 | **Normal** | `s` | Flash Jump (Jump to any character on screen) |
+
+## GitHub Copilot
+
+| Mode       | Key             | Action              |
+| :--------- | :-------------- | :------------------ |
+| **Insert** | `<M-l>` (Alt+l) | Accept Suggestion   |
+| **Insert** | `<M-]>` (Alt+]) | Next Suggestion     |
+| **Insert** | `<M-[>` (Alt+[) | Previous Suggestion |
+| **Insert** | `<C-]>`         | Dismiss Suggestion  |
