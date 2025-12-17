@@ -5,13 +5,13 @@ Specialized for **TypeScript (Next.js, React)**, **PHP (Laravel)**, and **Markdo
 
 ## Description
 
-This configuration provides a complete IDE-like experience within the terminal. It utilizes `lazy.nvim` for package management and includes pre-configured tools for modern web development, including Tailwind CSS support and Laravel Pint integration.
+This configuration provides a complete IDE-like experience within the terminal. It utilizes `lazy.nvim` for package management and includes pre-configured tools for modern web development, including Tailwind CSS support, Laravel Pint integration, and GitHub Copilot.
 
 ## Requirements
 
 - **Neovim** >= 0.9.0
 - **Git**
-- **Node.js** & **npm** (Required for Mason, Pyright, Prettier, etc.)
+- **Node.js** & **npm** (Required for Mason, Pyright, Prettier, GitHub Copilot)
 - **PHP** (Required for Intelephense and Pint)
 - **C Compiler** (gcc or clang, required for Treesitter parsers)
 - **Ripgrep** (Required for Telescope grep searches)
@@ -40,6 +40,14 @@ This configuration provides a complete IDE-like experience within the terminal. 
     nvim
     ```
 
+4.  **Setup GitHub Copilot**
+
+    After installation, run the following command to authenticate Copilot:
+
+    ```vim
+    :Copilot auth
+    ```
+
 ## Keybindings
 
 Detailed keybindings are documented in [KEYBINDINGS.md](./KEYBINDINGS.md).
@@ -66,11 +74,12 @@ The configuration is modular, located in `lua/plugins/`. Here is a breakdown of 
 - **none-ls.nvim**: Bridges tools that don't speak LSP (like Prettier, Black, Pint) with Neovim's LSP client, allowing standard commands like "Format on Save" to work universally.
 - **mason-lspconfig.nvim**: Closes the gap between Mason and lspconfig, ensuring installed servers are automatically configured.
 
-### Autocompletion
+### Autocompletion & AI
 
 - **nvim-cmp**: The completion engine.
+- **cmp-nvim-lsp**: Provides LSP completion sources to nvim-cmp.
 - **LuaSnip**: Snippet engine required by nvim-cmp.
-- **cmp-nvim-lsp**: Adds LSP source to nvim-cmp.
+- **zbirenbaum/copilot.lua**: Provides AI-powered code suggestions via Ghost Text (inline hints).
 
 ### Syntax & Treesitter
 
