@@ -15,7 +15,7 @@ This configuration provides a complete IDE-like experience within the terminal. 
 - **PHP** (Required for Intelephense and Pint)
 - **C Compiler** (gcc or clang, required for Treesitter parsers)
 - **Ripgrep** (Required for Telescope grep searches)
-- **Nerd Font** (Recommended for icons)
+- **Nerd Font** (Recommended for icons — pick one at https://www.nerdfonts.com/)
 
 ## Installation
 
