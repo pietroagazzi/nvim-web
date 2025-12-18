@@ -13,14 +13,6 @@ The `<Leader>` key is mapped to `<Space>`.
 | **Normal** | `<Leader>se` | Equalize window sizes                 |
 | **Normal** | `<Leader>sx` | Close current split                   |
 
-## Session Management
-
-| Mode       | Key          | Action                          |
-| :--------- | :----------- | :------------------------------ |
-| **Normal** | `<Leader>qs` | Restore session for current dir |
-| **Normal** | `<Leader>ql` | Restore last session            |
-| **Normal** | `<Leader>qd` | Don't save current session      |
-
 ## File Explorer (NvimTree)
 
 | Mode       | Key          | Action                              |
@@ -74,16 +66,15 @@ The `<Leader>` key is mapped to `<Space>`.
 | **Normal** | `K`          | Hover documentation                 |
 | **Normal** | `<Leader>ca` | See available code actions          |
 | **Normal** | `<Leader>rn` | Smart rename symbol                 |
-| **Normal** | `<Leader>D`  | Show buffer diagnostics             |
-| **Normal** | `<Leader>d`  | Show line diagnostics               |
-| **Normal** | `<Leader>rs` | Restart LSP server                  |
-| **Normal** | `<Leader>mp` | Format file (via Prettier/Pint/etc) |
+| **Normal** | `<Leader>D`  | Show buffer diagnostics |
+| **Normal** | `<Leader>d`  | Show line diagnostics   |
+| **Normal** | `<Leader>rs` | Restart LSP server      |
 
-## Navigation (Flash)
+## Formatting
 
-| Mode       | Key | Action                                       |
-| :--------- | :-- | :------------------------------------------- |
-| **Normal** | `s` | Flash Jump (Jump to any character on screen) |
+| Mode       | Key          | Action      |
+| :--------- | :----------- | :---------- |
+| **Normal** | `<Leader>mp` | Format file |
 
 ## GitHub Copilot
 

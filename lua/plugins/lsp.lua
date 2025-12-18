@@ -80,9 +80,9 @@ return {
           "cssls",
           "tailwindcss",
           "lua_ls",
-          "pyright",
           "intelephense",
           "emmet_ls",
+          "sqlls",
         },
         handlers = {
           function(server_name)
