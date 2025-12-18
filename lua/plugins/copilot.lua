@@ -31,5 +31,12 @@ return {
         ["."] = false,
       },
     })
+
+    -- Reduce Copilot suggestion opacity for better visibility
+    vim.api.nvim_set_hl(0, "CopilotSuggestion", {
+      fg = "#555555",
+      ctermfg = 8,
+      italic = true,
+    })
   end,
 }
