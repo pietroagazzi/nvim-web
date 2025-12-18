@@ -41,13 +41,6 @@ return {
           ignore = false,
         },
       })
-
-      -- Sync NvimTree colors with theme
-      vim.cmd([[
-        highlight NvimTreeNormal guibg=NONE
-        highlight NvimTreeEndOfBuffer guibg=NONE
-        highlight NvimTreeVertSplit guibg=NONE
-      ]])
     end,
     keys = {
        { "<leader>ee", "<cmd>NvimTreeToggle<CR>", desc = "Toggle file explorer" }, -- toggle file explorer
