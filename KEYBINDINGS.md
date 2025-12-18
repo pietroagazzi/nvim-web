@@ -57,18 +57,18 @@ The `<Leader>` key is mapped to `<Space>`.
 
 ## LSP & Code Actions
 
-| Mode       | Key          | Action                              |
-| :--------- | :----------- | :---------------------------------- |
-| **Normal** | `gD`         | Go to declaration                   |
-| **Normal** | `gd`         | Go to definition                    |
-| **Normal** | `gi`         | Go to implementation                |
-| **Normal** | `gt`         | Go to type definition               |
-| **Normal** | `K`          | Hover documentation                 |
-| **Normal** | `<Leader>ca` | See available code actions          |
-| **Normal** | `<Leader>rn` | Smart rename symbol                 |
-| **Normal** | `<Leader>D`  | Show buffer diagnostics |
-| **Normal** | `<Leader>d`  | Show line diagnostics   |
-| **Normal** | `<Leader>rs` | Restart LSP server      |
+| Mode       | Key          | Action                     |
+| :--------- | :----------- | :------------------------- |
+| **Normal** | `gD`         | Go to declaration          |
+| **Normal** | `gd`         | Go to definition           |
+| **Normal** | `gi`         | Go to implementation       |
+| **Normal** | `gt`         | Go to type definition      |
+| **Normal** | `K`          | Hover documentation        |
+| **Normal** | `<Leader>ca` | See available code actions |
+| **Normal** | `<Leader>rn` | Smart rename symbol        |
+| **Normal** | `<Leader>D`  | Show buffer diagnostics    |
+| **Normal** | `<Leader>d`  | Show line diagnostics      |
+| **Normal** | `<Leader>rs` | Restart LSP server         |
 
 ## Formatting
 

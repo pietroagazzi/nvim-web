@@ -130,13 +130,13 @@ The configuration is modular, located in `lua/plugins/`. Here is a breakdown of 
 
 ## Language Support Summary
 
-| Language          | LSP                         | Formatter  |
-| :---------------- | :-------------------------- | :--------- |
-| **TypeScript/JS** | `ts_ls`                     | `prettier`       |
-| **PHP**           | `intelephense`              | `pint`           |
-| **Blade**         | -                           | `prettier`       |
-| **SQL**           | `sqlls`                     | `sql_formatter`  |
-| **Prisma**        | -                           | -                |
-| **HTML/CSS**      | `html`, `cssls`, `emmet_ls` | `prettier` |
-| **Tailwind**      | `tailwindcss`               | `prettier` |
-| **Lua**           | `lua_ls`                    | `stylua`   |
+| Language          | LSP                         | Formatter       |
+| :---------------- | :-------------------------- | :-------------- |
+| **TypeScript/JS** | `ts_ls`                     | `prettier`      |
+| **PHP**           | `intelephense`              | `pint`          |
+| **Blade**         | -                           | `prettier`      |
+| **SQL**           | `sqlls`                     | `sql_formatter` |
+| **Prisma**        | -                           | -               |
+| **HTML/CSS**      | `html`, `cssls`, `emmet_ls` | `prettier`      |
+| **Tailwind**      | `tailwindcss`               | `prettier`      |
+| **Lua**           | `lua_ls`                    | `stylua`        |
