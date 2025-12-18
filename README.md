@@ -1,7 +1,7 @@
 # Neovim Configuration
 
 A structured Neovim configuration optimized for **Full Stack Web Development**.
-Specialized for **TypeScript (Next.js, React)**, **PHP (Laravel)**, and **Markdown** workflows.
+Specialized for **TypeScript (Next.js, React)**, **PHP (Laravel, Blade)**, **SQL**, **Prisma**, and **Markdown** workflows.
 
 ## Description
 
@@ -118,7 +118,6 @@ The configuration is modular, located in `lua/plugins/`. Here is a breakdown of 
 - **lualine.nvim**: A blazing fast and easy-to-configure statusline.
 - **indent-blankline.nvim**: Adds indentation guides to all lines (including empty lines).
 - **telescope.nvim**: A highly extendable fuzzy finder over lists. Used for finding files, grep searching, and diagnostics.
-- **flash.nvim**: Lets you jump to any location on screen using a few keystrokes (similar to EasyMotion).
 - **which-key.nvim**: Displays a popup with available keybindings if you pause halfway through a command sequence.
 
 ### Editing Utilities
@@ -126,17 +125,18 @@ The configuration is modular, located in `lua/plugins/`. Here is a breakdown of 
 - **autopairs**: Automatically closes brackets and quotes.
 - **nvim-surround**: Easily add/change/delete surroundings (parentheses, brackets, quotes, XML tags).
 - **gitsigns.nvim**: Super fast git integration. Shows signs in the gutter and allows inline staging/blame.
-- **persistence.nvim**: Automated session management. Restores your last session on startup if requested.
 - **comment.nvim**: Smart and powerful comment plugin for neovim. Supports `gcc` (line) and `gb` (block) commenting.
 - **todo-comments.nvim**: Highlights comments like `TODO`, `FIXME`, `HACK` in the code and listing them in Telescope.
 
 ## Language Support Summary
 
-| Language          | LSP                         | Formatter        |
-| :---------------- | :-------------------------- | :--------------- |
-| **TypeScript/JS** | `ts_ls`                     | `prettier`       |
-| **PHP**           | `intelephense`              | `pint`           |
-| **HTML/CSS**      | `html`, `cssls`, `emmet_ls` | `prettier`       |
-| **Tailwind**      | `tailwindcss`               | `prettier`       |
-| **Python**        | `pyright`                   | `black`, `isort` |
-| **Lua**           | `lua_ls`                    | `stylua`         |
+| Language          | LSP                         | Formatter       |
+| :---------------- | :-------------------------- | :-------------- |
+| **TypeScript/JS** | `ts_ls`                     | `prettier`      |
+| **PHP**           | `intelephense`              | `pint`          |
+| **Blade**         | -                           | `prettier`      |
+| **SQL**           | `sqlls`                     | `sql_formatter` |
+| **Prisma**        | -                           | -               |
+| **HTML/CSS**      | `html`, `cssls`, `emmet_ls` | `prettier`      |
+| **Tailwind**      | `tailwindcss`               | `prettier`      |
+| **Lua**           | `lua_ls`                    | `stylua`        |
